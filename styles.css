@@ -1,0 +1,266 @@
+/* Estilo global para eliminar márgenes y padding por defecto y establecer el modelo de caja */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding y border sean incluidos en el ancho/altura total */
+}
+
+/* Estilo básico para el cuerpo del documento */
+body {
+    font-family: Arial, sans-serif; /* Establece la fuente predeterminada para el texto del cuerpo */
+}
+
+/* Estilos para el header */
+header {
+    color: #333; /* Color de texto dentro del header */
+    padding: 20px 20px; /* Espaciado interno del header, arriba/abajo y derecha/izquierda */
+}
+
+/* Estilos para el contenedor del contenido del header */
+.header-content {
+    max-width: 960px; /* Ancho máximo del contenedor */
+    display: flex; /* Usa Flexbox para la disposición de los elementos */
+    margin: auto; /* Centra el contenedor horizontalmente */
+    justify-content: space-between; /* Distribuye el espacio entre el título y el logo */
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+    background-image: url(img/fondo2.jpg); /* Fondo con imagen */
+    background-size: cover; /* La imagen de fondo cubre completamente el espacio */
+    background-position: center; /* Centra la imagen de fondo */
+    height: 100px; /* Altura fija del contenedor */
+    line-height: 1.2; /* Espaciado de línea para el texto dentro */
+    border-top-left-radius: 10px; /* Redondea las esquinas superiores izquierda */
+    border-top-right-radius: 10px; /* Redondea las esquinas superiores derecha */
+}
+
+/* Estilo para el título principal dentro del header */
+.header-content h1 {
+    margin: 0; /* Elimina margen predeterminado */
+    font-size: 24px; /* Tamaño de fuente del título */
+}
+
+/* Estilo para el subtítulo pequeño dentro del header */
+.titulo-pequeno {
+    font-size: 18px; /* Tamaño de fuente más pequeño para "CENTRO VETERINARIO" */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-weight: bold; /* Texto en negrita */
+    font-family: sans-serif; /* Fuente sans-serif para el subtítulo */
+    margin-left: 50px; /* Margen izquierdo */
+}
+
+/* Estilo para el subtítulo grande dentro del header */
+.titulo-grande {
+    font-size: 36px; /* Tamaño de fuente más grande para "Caninos y Felinos" */
+    font-weight: normal; /* Peso normal del texto */
+    font-style: italic; /* Estilo cursiva */
+    margin-left: 50px; /* Margen izquierdo */
+}
+
+/* Estilo para el logo dentro del header */
+.header-content img {
+    height: 100px; /* Altura del logo para coincidir con la altura del contenedor */
+    margin-right: 100px; /* Margen derecho */
+}
+
+/* Estilos para la navegación */
+nav ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    display: flex; /* Distribución horizontal de los elementos de la lista usando Flexbox */
+    justify-content: space-around; /* Distribuye los elementos uniformemente */
+    width: 100%; /* Usa el ancho completo del contenedor */
+}
+
+/* Estilos para el contenedor del menú */
+.menu {
+    max-width: 960px; /* Ancho máximo del menú */
+    border-bottom-left-radius: 10px; /* Redondea la esquina inferior izquierda */
+    border-bottom-right-radius: 10px; /* Redondea la esquina inferior derecha */
+    background-color: rgb(22, 76, 73); /* Color de fondo del menú */
+    margin: auto; /* Centra el contenido horizontalmente */
+    display: flex; /* Usa Flexbox para la disposición de los elementos */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+}
+
+/* Estilo para los elementos de lista en la navegación */
+nav ul li {
+    margin: 10px; /* Margen alrededor de cada elemento de lista */
+}
+
+/* Estilos para los enlaces del menú */
+nav ul li a {
+    color: white; /* Color de texto para los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    padding: 5px 10px; /* Espaciado interno para cada enlace */
+    margin-right: 70px; /* Margen derecho para separar los enlaces */
+}
+
+/* Añade una línea vertical entre los elementos del menú excepto el último */
+nav ul li:not(:last-child) {
+    border-right: 1px solid white; /* Línea vertical blanca entre los elementos */
+}
+
+/* Estilo para los enlaces al pasar el mouse */
+nav ul li a:hover {
+    background-color: #555; /* Cambio de color de fondo al pasar el mouse */
+    border-color: white; /* Color de borde */
+}
+
+.contenedor1 {
+    width: 35%;
+    margin: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden; /*esta propiedad sirve para asegurarse de que cualquier contenido que sobresalga 
+                        del contenedor (en este caso, la descripción de la película) no se muestre fuera 
+                        de los límites del contenedor y se recorte de manera limpia y ordenada*/
+    background-color: #ffffa8;
+    margin-left: 280px;
+    margin-top: 0;
+}
+
+.contenedor2 {
+    max-width: 35%;
+    padding: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden; /*esta propiedad sirve para asegurarse de que cualquier contenido que sobresalga 
+                        del contenedor (en este caso, la descripción de la película) no se muestre fuera 
+                        de los límites del contenedor y se recorte de manera limpia y ordenada*/
+    background-color: #ffffa8;
+    margin-left: 280px;
+    margin-top: 0;
+}
+
+.descripcion {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 10px;
+}
+
+.descripcion h2 {
+    margin: 0;
+    font-size: 18px;
+    text-align: center; 
+    flex: 1;
+}
+
+.descripcion p {
+    margin-top: 5px;
+    font-size: 14px;
+    text-align: left;
+    flex: 2; /* Ocupa el espacio disponible*/
+    
+}
+
+.descripcion img {
+    width: 15rem;
+    float: right;
+    border-radius: 20px;
+    border: 1px solid black;
+    margin-left: 20px;
+    order: 3;
+    margin-top: 10px;
+}
+
+/*Formulario*/
+
+.container-formulario {
+    max-width: 35%;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    float: right;
+}
+
+.container-formulario h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.boton {
+    text-align: center;
+}
+
+input[type="submit"] {
+    padding: px 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    background-color: #0056b3;
+}
+
+/*Footer*/
+
+.footer {
+    max-width: 960px; /* Ancho máximo del menú */
+    border-bottom-left-radius: 10px; /* Redondea la esquina inferior izquierda */
+    border-bottom-right-radius: 10px; /* Redondea la esquina inferior derecha */
+    background-color: rgb(22, 76, 73); /* Color de fondo del menú */
+    margin: auto; /* Centra el contenido horizontalmente */
+    display: flex; /* Usa Flexbox para la disposición de los elementos */
+    justify-content: center; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+    margin-top: 15px;
+}
+
+
+
+.footer p {
+    align-items: center;
+    color:#7e7a7a;
+    justify-content: center;
+}
+
+
+
+/* Estilos responsive para cuando la pantalla tiene 600px o menos */
+@media (max-width: 600px) {
+    .header-content {
+        flex-direction: column; /* Cambiar la dirección a vertical */
+        justify-content: center; /* Centrar verticalmente los elementos */
+        align-items: center; /* Centrar horizontalmente los elementos */
+        text-align: center;
+    }
+    .header-content img {
+        display: none;
+    }
+    
+    nav ul {
+        flex-direction: column; /* Los elementos del menú se apilan verticalmente */
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    nav ul li:not(:last-child) {
+        border-right: none;
+    }
+}
+
