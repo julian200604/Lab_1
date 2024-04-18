@@ -61,13 +61,6 @@ header {
     margin-right: 100px; /* Margen derecho */
 }
 
-/* Estilos para la navegación */
-nav ul {
-    list-style: none; /* Elimina los puntos de la lista */
-    display: flex; /* Distribución horizontal de los elementos de la lista usando Flexbox */
-    justify-content: space-around; /* Distribuye los elementos uniformemente */
-    width: 100%; /* Usa el ancho completo del contenedor */
-}
 
 /* Estilos para el contenedor del menú */
 .menu {
@@ -79,116 +72,105 @@ nav ul {
     display: flex; /* Usa Flexbox para la disposición de los elementos */
     justify-content: space-between; /* Distribuye el espacio entre los elementos */
     align-items: center; /* Alinea los elementos verticalmente al centro */
+    height: 40px;
+    list-style: none;
 }
 
 /* Estilo para los elementos de lista en la navegación */
-nav ul li {
+nav ul li a{
     margin: 10px; /* Margen alrededor de cada elemento de lista */
-}
-
-/* Estilos para los enlaces del menú */
-nav ul li a {
+    justify-content: space-around; /* Distribuye los elementos uniformemente */
+    width: 100%; /* Usa el ancho completo del contenedor */
     color: white; /* Color de texto para los enlaces */
     text-decoration: none; /* Elimina el subrayado de los enlaces */
-    padding: 5px 10px; /* Espaciado interno para cada enlace */
-    margin-right: 70px; /* Margen derecho para separar los enlaces */
-}
-
-/* Añade una línea vertical entre los elementos del menú excepto el último */
-nav ul li:not(:last-child) {
-    border-right: 1px solid white; /* Línea vertical blanca entre los elementos */
+    padding: 20px 20px; /* Espaciado interno para cada enlace */
+    margin-right: 50px; /* Margen derecho para separar los enlaces */
 }
 
 /* Estilo para los enlaces al pasar el mouse */
 nav ul li a:hover {
-    background-color: #555; /* Cambio de color de fondo al pasar el mouse */
-    border-color: white; /* Color de borde */
+    background-color: rgb(47, 113, 110); /* Cambio de color de fondo al pasar el mouse */
 }
 
 .contenedor1 {
     width: 35%;
     margin: 5px;
-    display: flex;
     align-items: center;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    overflow: hidden; /*esta propiedad sirve para asegurarse de que cualquier contenido que sobresalga 
-                        del contenedor (en este caso, la descripción de la película) no se muestre fuera 
-                        de los límites del contenedor y se recorte de manera limpia y ordenada*/
     background-color: #ffffa8;
     margin-left: 280px;
-    margin-top: 0;
+    overflow: hidden;
+    padding: 10px;
 }
 
 .contenedor2 {
     width: 35%;
     margin: 5px;
-    display: flex;
     align-items: center;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    overflow: hidden; /*esta propiedad sirve para asegurarse de que cualquier contenido que sobresalga 
-                        del contenedor (en este caso, la descripción de la película) no se muestre fuera 
-                        de los límites del contenedor y se recorte de manera limpia y ordenada*/
     background-color: #ffffa8;
     margin-left: 280px;
     margin-top: 0;
-}
-
-.descripcion {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
+    overflow: hidden;
     padding: 10px;
 }
 
-.descripcion h2 {
-    margin: 0;
-    font-size: 18px;
-    text-align: center; 
-    flex: 1;
+.contenedor1 img {
+    max-width: 200px;
+    margin-top: -30%;
+    margin-left: 60%;
+    border-radius: 10px;
 }
 
-.descripcion p {
-    margin-top: 5px;
-    font-size: 14px;
-    text-align: left;
-    flex: 2; /* Ocupa el espacio disponible*/
-    
+.contenedor2 img {
+    max-width: 200px;
+    margin-top: -30%;
+    margin-left: 60%;
+    border-radius: 10px;
 }
 
-.descripcion img {
-    margin-left: auto;
-    max-width: 50%;
-    height: ;
-    width: 15rem;
-    float: right;
-    border-radius: 20px;
-    border: 1px solid black;
-    margin-left: 20px;
-    order: 3;
-    margin-top: 10px;
+.contenedor1 h2 {
+    margin-bottom: 8px;
+}
+
+.contenedor2 h2 {
+    margin-bottom: 8px;
+}
+
+.contenedor1 p {
+    max-width: 60%;
+
+}
+
+.contenedor2 p {
+    max-width: 60%;
 }
 
 /*Formulario*/
 
-.container {
+.form_container {
     width: 25%;
-    margin: 50px auto;
+    margin: 50px;
     background-color: rgb(22, 76, 73); /* Fondo verde oscuro */
     color: white; /* Color de letra blanco */
-    padding: 20px;
+    padding: 5px;
     border-radius: 10px;
+    margin-top: -35%;
+    margin-left: 57%;
+
 }
 
-.container button {
+.form_container button {
     margin-left: 25%;
 }
 
 
-.container h1 {
+.form_container h1 {
     text-align: center;
-    margin-bottom: 9px;
+    margin-bottom: 10px;
+
 }
 
 form {
@@ -200,11 +182,12 @@ input[type="text"],
 input[type="date"],
 input[type="time"],
 button {
+    width: 90%;
     padding: 10px;
     border: none;
     border-radius: 5px;
     color: #2c3e50; /* Color de letra gris */
-    margin-bottom: 5%;
+    margin-bottom: 2%;
 }
 
 button {
@@ -213,7 +196,6 @@ button {
     color: grey;
     width: 50%;
     align-items: center;
-    margin-top: 10px;
 }
 
 button:hover {
@@ -221,121 +203,105 @@ button:hover {
     cursor: pointer; 
 }
 
-.container.absolute {
-    position: absolute;
-    top: 66%;
-    left: 69%;
-    transform: translate(-50%, -50%);
-}
+
+
 /*Footer*/
 
-.footer {
-    max-width: 960px; /* Ancho máximo del menú */
-    border-bottom-left-radius: 10px; /* Redondea la esquina inferior izquierda */
-    border-bottom-right-radius: 10px; /* Redondea la esquina inferior derecha */
+footer {
+    margin-left: 270px;
+    margin-right: 270px;
     background-color: rgb(22, 76, 73); /* Color de fondo del menú */
-    margin: auto; /* Centra el contenido horizontalmente */
-    display: flex; /* Usa Flexbox para la disposición de los elementos */
-    justify-content: center; /* Distribuye el espacio entre los elementos */
-    align-items: center; /* Alinea los elementos verticalmente al centro */
-    margin-top: 15px;
+    text-align: center; /* Alinea los elementos verticalmente al centro */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: rgb(153, 150, 150);
+    margin-top: 20px;
 }
 
 
-
-.footer p {
-    align-items: center;
-    color:#7e7a7a;
-    justify-content: center;
-}
-
-
-
-/* Estilos responsive para cuando la pantalla tiene 600px o menos */
-@media (width <= 600px) {
+    /* Estilos responsive para cuando la pantalla tiene 600px o menos */
+@media (max-width: 600px) {
     .header-content {
-        flex-direction: column; /* Cambiar la dirección a vertical */
-        justify-content: center; /* Centrar verticalmente los elementos */
-        align-items: center; /* Centrar horizontalmente los elementos */
-        text-align: center;
+        justify-content: center;
     }
+
     .header-content img {
-        display: none;
-    }
-    .menu li{
-        padding: 10px 0;
-    }
-    nav ul li:not(:last-child) {
-        display: none;
-    }
-    .menu a {
-        display: none;
-    }
-    .contenedor1 {
-        width: 90%;
-        margin-left: 5%;
-    }
-    .contenedor2 {
-        width: 90%;
-        margin-left: 5%;
-    }
-    .container {
-        width: 90%;
-        background-color: rgb(22, 76, 73); /* Fondo verde oscuro */
-        color: white; /* Color de letra blanco */
-        padding: 20px;
-        border-radius: 10px;
+        height: 100px;
+        margin-right: 0;
         margin-top: 10px;
     }
-    .container.absolute {
-        position: static; /* o initial */
-        top: auto;
-        left: auto;
-        transform: none;
+
+    .titulo-pequeno, .titulo-grande {
+        margin-left: 0;
     }
- 
+
+    .menu {
+        flex-direction: column;
+        height: 50%;
+    }
+
+    nav ul li a {
+        text-align: center;
+        padding: 10px;
+        margin-right: 0;
+    }
+
+    .contenedor1, .contenedor2 {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+
+    .form_container {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+
+    footer {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
 
+/* Estilos responsive para cuando la pantalla tiene 1100px */
 @media (601px <= width <= 1199px) {
     .header-content {
-        flex-direction: column; /* Cambiar la dirección a vertical */
-        justify-content: center; /* Centrar verticalmente los elementos */
-        align-items: center; /* Centrar horizontalmente los elementos */
-        text-align: center;
+        justify-content: center;
     }
+
     .header-content img {
-        display: none;
-    }
-    .menu li{
-        padding: 10px 0;
-    }
-    nav ul li:not(:last-child) {
-        display: none;
-    }
-    .menu a {
-        display: none;
-    }
-    .contenedor1 {
-        width: 90%;
-        margin-left: 5%;
-    }
-    .contenedor2 {
-        width: 90%;
-        margin-left: 5%;
-    }
-    .container {
-        width: 90%;
-        background-color: rgb(22, 76, 73); /* Fondo verde oscuro */
-        color: white; /* Color de letra blanco */
-        padding: 20px;
-        border-radius: 10px;
+        height: 100px;
+        margin-right: 0;
         margin-top: 10px;
     }
-    .container.absolute {
-        position: static; /* o initial */
-        top: auto;
-        left: auto;
-        transform: none;
+
+    .menu {
+        flex-direction: column;
+        height: 50%;
+    }
+
+    .contenedor1, .contenedor2 {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .form_container {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+    }
+
+    footer {
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
+
+
+
 
